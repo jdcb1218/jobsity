@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Config Migrate feature.
+ */
+
+include_once 'config_migrate.features.inc';

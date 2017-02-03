@@ -1,0 +1,56 @@
+<?php 
+
+
+/**
+ * Implements hook_help().
+ */
+function jobsity_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#jobsity':
+      return '<p>' . t('help obsity', array('drupal' => 1)) . '</p>';
+  }
+}
+
+/**
+ * Implements hook_permission().
+ */
+function jobsity_permission() {
+  return array(
+    'administer  dark' => array(
+      'title' => t('Administer  dark'),
+      'description' => t('Perform administration tasks for dark'),
+    ),
+  );
+}
+/**
+ * Implements hook_menu().
+ */
+function jobsity_menu() {
+    $items['admin/config/jobsity'] = array(
+    'title' => 'Jobsity Config',
+    'description' => 'Settings content Jobsity Config',
+    'position' => 'left',
+    'weight' => -15, 
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('jobsity_form_records'),
+    'access arguments' => array('administer site configuration'),
+    'file' => 'includes/jobsity_migrate.inc',
+    );
+
+    $items['admin/config/system/jobsity'] = array(
+      'title' => t('Jobsity Config'),
+      'description' => t('Jobsity Config'),
+      'file' => 'includes/jobsity_migrate.inc',
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('jobsity_form_records'),
+      'access arguments' => array('administer site configuration'),
+    );
+
+    $items['admin/config/system/jobsity/settings'] = array(    
+      'title'   => t('Jobsity Config'),
+      'type'    => MENU_DEFAULT_LOCAL_TASK,
+      'weight'  => 1,
+    );
+
+    return $items;
+}

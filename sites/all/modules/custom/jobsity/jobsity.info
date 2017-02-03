@@ -1,0 +1,38 @@
+name = Jobsity
+description = Import Site Jobsity
+; Information added by Drupal.org packaging script on 2015-07-02;
+dependencies[] = views
+dependencies[] = libraries (>=2.x)
+dependencies[] = jquery_update
+dependencies[] = youtube
+dependencies[] = dynamic_background
+dependencies[] = quicktabs
+dependencies[] = entity
+dependencies[] = date
+dependencies[] = ctools
+dependencies[] = backup_migrate
+dependencies[] = devel
+dependencies[] = field_formatter_settings
+dependencies[] = image
+dependencies[] = image_hover_effects
+dependencies[] = jcarousel
+dependencies[] = link
+dependencies[] = pathauto
+dependencies[] = references
+dependencies[] = token
+dependencies[] = views_php
+dependencies[] = views_ui
+dependencies[] = wysiwyg
+dependencies[] = quicktabs_tabstyles
+dependencies[] = date_views
+dependencies[] = flexslider
+dependencies[] = features
+dependencies[] = config_migrate
+; Information added by Drupal.org packaging script on 2015-07-02
+configure = admin/config/system/jobsity
+; configure migrate 
+package = jobsity
+version = "7.x-1.2"
+core = "7.x"
+project = "jobsity"
+datestamp = "1435829040"
